@@ -6,18 +6,24 @@
   <title>Message – True Fallacy</title>
 
   <style>
+    :root {
+      /* MESSAGE color system (lighter, warm neutral) */
+      --bg-top: #c6bfb2;
+      --bg-bottom: #7f7a70;
+
+      --text-primary: #000000;
+      --text-secondary: rgba(0,0,0,0.6);
+
+      --button-bg: rgba(255,255,255,0.55);
+      --button-border: rgba(0,0,0,0.15);
+      --button-hover-bg: #ffffff;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-      /* MESSAGE background: warm neutral pulled darker for contrast */
-      background: radial-gradient(
-        circle at top,
-        #b8b1a5,
-        #6e6a63
-      );
-
-      color: #000000;
+      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom));
+      color: var(--text-primary);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -48,6 +54,7 @@
       width: 200px;
       margin-bottom: 30px;
       opacity: 0.6;
+      filter: brightness(0) saturate(100%);
     }
 
     .link {
@@ -57,10 +64,10 @@
       gap: 12px;
 
       text-decoration: none;
-      color: #000000;
+      color: var(--text-primary);
 
-      background: rgba(255,255,255,0.5);
-      border: 1px solid rgba(0,0,0,0.15);
+      background: var(--button-bg);
+      border: 1px solid var(--button-border);
       padding: 16px;
       border-radius: 12px;
       margin-bottom: 16px;
@@ -71,15 +78,15 @@
     }
 
     .link:hover {
-      background: #ffffff;
-      color: #000000;
+      background: var(--button-hover-bg);
+      color: var(--text-primary);
     }
 
-    /* ICONS: convert white SVGs to black */
     .link img {
       width: 20px;
       height: 20px;
       filter: brightness(0) saturate(100%);
+      transition: filter 0.25s ease;
     }
 
     footer {
@@ -110,30 +117,54 @@
       src="../assets/brand/true-fallacy-white.svg"
       alt="True Fallacy"
       class="artist-logo"
-      style="filter: brightness(0) saturate(100%);"
-    >
+    />
 
-    <a class="link" href="https://open.spotify.com/track/1nPcWIv3EYEMVghkD7GhWi?si=CwV-yRytSRyanN2CIaxrMA" target="_blank">
+    <a
+      class="link"
+      href="https://open.spotify.com/track/1nPcWIv3EYEMVghkD7GhWi?si=CwV-yRytSRyanN2CIaxrMA"
+      target="_blank"
+      rel="noopener"
+    >
       <img src="../assets/icons/spotify-white.svg" alt="Spotify">
       Play on Spotify
     </a>
 
-    <a class="link" href="https://music.apple.com/us/album/message/583359116?i=583359177" target="_blank">
+    <a
+      class="link"
+      href="https://music.apple.com/us/album/message/583359116?i=583359177"
+      target="_blank"
+      rel="noopener"
+    >
       <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
       Play on Apple Music
     </a>
 
-    <a class="link" href="https://youtu.be/-SbTEFbfvDU?si=xSjt5zr1HIBeiffp" target="_blank">
+    <a
+      class="link"
+      href="https://youtu.be/-SbTEFbfvDU?si=xSjt5zr1HIBeiffp"
+      target="_blank"
+      rel="noopener"
+    >
       <img src="../assets/icons/youtube-white.svg" alt="YouTube">
       Play on YouTube
     </a>
 
-    <a class="link" href="https://on.soundcloud.com/1445JMYUZcSId52SRO" target="_blank">
+    <a
+      class="link"
+      href="https://on.soundcloud.com/1445JMYUZcSId52SRO"
+      target="_blank"
+      rel="noopener"
+    >
       <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
       Play on SoundCloud
     </a>
 
-    <a class="link" href="https://truefallacy.bandcamp.com/track/message" target="_blank">
+    <a
+      class="link"
+      href="https://truefallacy.bandcamp.com/track/message"
+      target="_blank"
+      rel="noopener"
+    >
       <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
       Download on Bandcamp
     </a>
