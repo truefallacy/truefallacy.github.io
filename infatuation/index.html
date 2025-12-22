@@ -37,13 +37,6 @@
       letter-spacing: 0.05em;
     }
 
-    h2 {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #b3b3b3;
-      margin-bottom: 30px;
-    }
-
     .link {
       display: flex;
       align-items: center;
@@ -61,7 +54,96 @@
       backdrop-filter: blur(6px);
     }
 
+    .link:hover {
+      background: #ffffff;
+      color: #000000;
+    }
 
+    .link:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    .link img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .artist-logo {
+      width: 200px;
+      margin-bottom: 30px;
+      opacity: 0.7;
+    }
+
+    .footer-logo {
+      width: 36px;
+      opacity: 0.4;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img
+      src="infatuation-cover.jpg"
+      alt="Infatuation cover art"
+      class="cover"
+      loading="lazy"
+    >
+
+    <h1>INFATUATION</h1>
+
+    <img
+      src="../assets/brand/true-fallacy-white.svg"
+      alt="True Fallacy"
+      class="artist-logo"
+    />
+
+    <a class="link" href="https://open.spotify.com/album/4Rjc9SkL9ykXBDeq7OqioE?si=sRmXo3LAQNWZLZzKUmeUcA" target="_blank" rel="noopener">
+      <img src="../assets/icons/spotify-white.svg" alt="Spotify">
+      Play on Spotify
+    </a>
+
+    <a class="link" href="https://music.apple.com/us/album/infatuation/1839276887?i=1839276890" target="_blank" rel="noopener">
+      <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
+      Play on Apple Music
+    </a>
+
+    <a class="link" href="https://youtu.be/zkGf_CLQ1WY?si=AfobKX8X1kCyeH51" target="_blank" rel="noopener">
+      <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+      Play on YouTube
+    </a>
+
+    <a class="link" href="https://on.soundcloud.com/jTvZqFpSKIzmyzQ9mZ" target="_blank" rel="noopener">
+      <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
+      Play on SoundCloud
+    </a>
+
+    <a class="link" href="https://truefallacy.bandcamp.com/track/infatuation-2" target="_blank" rel="noopener">
+      <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
+      Download on Bandcamp
+    </a>
+
+    <footer>
+      <img
+        src="../assets/brand/tf-white.svg"
+        alt="True Fallacy"
+        class="footer-logo"
+      />
+    </footer>
+
+  </div>
+
+</body>
+</html>
     .link:hover {
       background: #ffffff;
       color: #000000;
