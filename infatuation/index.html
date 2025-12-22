@@ -93,8 +93,24 @@
       color: #666;
       letter-spacing: 0.1em;
     }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
   </style>
 </head>
+
+
 <body>
 
   <div class="container">
