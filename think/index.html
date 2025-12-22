@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THINK – True Fallacy</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #0e1a3a, #02040b);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .cover {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+      letter-spacing: 0.05em;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .link:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .link img {
+      width: 20px;
+      height: 20px;
+      transition: filter 0.25s ease;
+    }
+
+    .link:hover img,
+    .link:active img {
+      filter: brightness(0);
+    }
+
+    .artist-logo {
+      width: 200px;
+      margin-bottom: 30px;
+      opacity: 0.7;
+    }
+
+    .footer-logo {
+      width: 36px;
+      opacity: 0.4;
+    }
+
+    footer {
+      margin-top: 35px;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img
+      src="think-cover.jpg"
+      alt="THINK cover art"
+      class="cover"
+      loading="lazy"
+    >
+
+    <h1>THINK</h1>
+
+    <img
+      src="../assets/brand/true-fallacy-white.svg"
+      alt="True Fallacy"
+      class="artist-logo"
+    />
+
+    <a
+      class="link"
+      href="https://open.spotify.com/track/0iFZITtlwWOHqk8U7OU9s3?si=0gbb5jHqScm7IkmkgWjJhw"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/spotify-white.svg" alt="Spotify">
+      Play on Spotify
+    </a>
+
+    <a
+      class="link"
+      href="https://music.apple.com/us/album/think/1684441206?i=1684441352"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
+      Play on Apple Music
+    </a>
+
+    <a
+      class="link"
+      href="https://youtu.be/hzL82opSlsk?si=YQvZkiiRQ3Is0kGM"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+      Play on YouTube
+    </a>
+
+    <a
+      class="link"
+      href="https://on.soundcloud.com/UVHlpPSZJnjn9VJOYK"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
+      Play on SoundCloud
+    </a>
+
+    <a
+      class="link"
+      href="https://truefallacy.bandcamp.com/track/think"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
+      Download on Bandcamp
+    </a>
+
+    <footer>
+      <img
+        src="../assets/brand/tf-white.svg"
+        alt="True Fallacy"
+        class="footer-logo"
+      />
+    </footer>
+
+  </div>
+
+</body>
+</html>
