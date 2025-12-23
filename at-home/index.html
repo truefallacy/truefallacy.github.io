@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AT HOME – True Fallacy</title>
+
+  <style>
+    :root {
+      --text-primary: #000000;
+      --text-muted: #4a4a4a;
+      --button-bg: rgba(0, 0, 0, 0.05);
+      --button-border: rgba(0, 0, 0, 0.2);
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(
+        circle at top,
+        #9b9a8f,
+        #6f6e64
+      );
+      color: var(--text-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .cover {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+      letter-spacing: 0.05em;
+    }
+
+    .artist-logo {
+      width: 200px;
+      margin-bottom: 30px;
+      opacity: 0.65;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      background: var(--button-bg);
+      border: 1px solid var(--button-border);
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .link:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .link img {
+      width: 20px;
+      height: 20px;
+
+      /* Force white SVGs to render black */
+      filter: brightness(0) saturate(100%);
+    }
+
+    footer {
+      margin-top: 35px;
+    }
+
+    .footer-logo {
+      width: 36px;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img
+      src="at-home-cover.jpg"
+      alt="AT HOME cover art"
+      class="cover"
+    >
+
+    <h1>AT HOME</h1>
+
+    <img
+      src="../assets/brand/true-fallacy-white.svg"
+      alt="True Fallacy"
+      class="artist-logo"
+    />
+
+    <a
+      class="link"
+      href="https://open.spotify.com/track/30rlUp5wAUapOGtHYvK4ME?si=2bUdoZkOSFmOFw5AOay6bw"
+      target="_blank"
+    >
+      <img src="../assets/icons/spotify-white.svg" alt="Spotify">
+      Play on Spotify
+    </a>
+
+    <a
+      class="link"
+      href="https://music.apple.com/us/album/at-home/1197890612?i=1197890619"
+      target="_blank"
+    >
+      <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
+      Play on Apple Music
+    </a>
+
+    <a
+      class="link"
+      href="https://youtu.be/ZU8atKMhP2M?si=i3pVUbP82V3BNUN1"
+      target="_blank"
+    >
+      <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+      Play on YouTube
+    </a>
+
+    <a
+      class="link"
+      href="https://on.soundcloud.com/gG4E5pLnVgulRa7Iu8"
+      target="_blank"
+    >
+      <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
+      Play on SoundCloud
+    </a>
+
+    <a
+      class="link"
+      href="https://truefallacy.bandcamp.com/album/making-the-noise-all-go-away?t=2"
+      target="_blank"
+    >
+      <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
+      Download on Bandcamp
+    </a>
+
+    <footer>
+      <img
+        src="../assets/brand/tf-white.svg"
+        alt="True Fallacy"
+        class="footer-logo"
+      />
+    </footer>
+
+  </div>
+
+</body>
+</html>
