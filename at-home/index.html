@@ -14,13 +14,13 @@
     :root {
       --text-primary: #000000;
       --text-muted: #4a4a4a;
-
-      --button-bg: rgba(0, 0, 0, 0.05);
-      --button-border: rgba(0, 0, 0, 0.2);
-
-      /* Slightly lighter background tones */
-      --bg-top: #a6a59a;
-      --bg-bottom: #7a796e;
+    
+      --button-bg: rgba(255, 255, 255, 0.72);
+      --button-border: rgba(0, 0, 0, 0.18);
+    
+      /* Slightly lighter, softer background */
+      --bg-top: #b3b2a8;
+      --bg-bottom: #87867b;
     }
 
     * {
@@ -74,26 +74,34 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-
+    
       margin-bottom: 16px;
       padding: 16px;
-
+    
       border-radius: 12px;
       border: 1px solid var(--button-border);
-      background: var(--button-bg);
-
+    
+      /* Off-white default */
+      background: rgba(255, 255, 255, 0.72);
+    
       color: var(--text-primary);
       text-decoration: none;
       font-size: 1rem;
-
-      transition: background 0.25s ease, transform 0.15s ease;
+    
+      transition:
+        background 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+    
       backdrop-filter: blur(6px);
     }
-
+    
     .link:hover {
+      /* Full white on hover */
       background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
-
+    
     .link:active {
       transform: scale(0.98);
     }
