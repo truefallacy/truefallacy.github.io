@@ -11,8 +11,12 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top, #cfa2bb, #1a0b14);
-      color: #ffffff;
+      background: radial-gradient(
+        circle at top,
+        #f4e8ef,
+        #e6d7df
+      );
+      color: #000000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,37 +27,43 @@
       max-width: 420px;
       width: 90%;
       text-align: center;
-      padding: 40px 0;
+      padding: 44px 0;
     }
 
     /* ---------- HEADER ---------- */
 
     .artist-logo {
-      width: 260px;
+      width: 270px;
       margin-bottom: 18px;
+
+      /* Pink + grey pop without modifying SVG */
+      filter:
+        grayscale(1)
+        brightness(1.1)
+        drop-shadow(0 2px 6px rgba(236, 96, 166, 0.35));
+      opacity: 0.95;
     }
 
     .subhead {
       font-size: 0.85rem;
-      letter-spacing: 0.25em;
-      opacity: 0.85;
-      margin-bottom: 28px;
+      letter-spacing: 0.28em;
+      color: #444;
+      margin-bottom: 30px;
     }
 
     /* ---------- SOCIAL ICONS ---------- */
 
     .socials {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 36px;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 38px;
     }
 
     .socials a img {
       width: 26px;
       height: 26px;
-      opacity: 0.85;
+      opacity: 0.75;
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
@@ -69,31 +79,41 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      background: rgba(255,255,255,0.85);
+
+      background: rgba(255,255,255,0.88);
       color: #000000;
+
       padding: 16px;
       border-radius: 14px;
       margin-bottom: 16px;
+
       font-size: 1rem;
       font-weight: 500;
-      transition: background 0.25s ease, transform 0.15s ease;
+
+      transition:
+        background 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .link:hover {
       background: #ffffff;
       color: #000000;
       transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
     }
 
     /* ---------- FOOTER ---------- */
 
     footer {
-      margin-top: 42px;
+      margin-top: 46px;
     }
 
     .footer-logo {
       width: 38px;
-      opacity: 0.4;
+      opacity: 0.45;
     }
 
   </style>
@@ -115,7 +135,7 @@
       NEW MUSIC – OUT NOW
     </div>
 
-    <!-- SOCIAL ICONS -->
+    <!-- SOCIAL ICONS (HORIZONTAL) -->
     <div class="socials">
       <a href="https://www.instagram.com/truefallacy/" target="_blank" rel="noopener">
         <img src="../assets/icons/instagram-white.svg" alt="Instagram">
@@ -139,19 +159,39 @@
     </div>
 
     <!-- BUTTON LINKS -->
-    <a class="link" href="https://truefallacy.github.io/infatuation/">
+    <a
+      class="link"
+      href="https://truefallacy.github.io/infatuation/"
+      target="_blank"
+      rel="noopener"
+    >
       Listen to INFATUATION
     </a>
 
-    <a class="link" href="https://truefallacy.github.io/think/">
+    <a
+      class="link"
+      href="https://truefallacy.github.io/think/"
+      target="_blank"
+      rel="noopener"
+    >
       Listen to THINK
     </a>
 
-    <a class="link" href="https://truefallacy.github.io/message/">
+    <a
+      class="link"
+      href="https://truefallacy.github.io/message/"
+      target="_blank"
+      rel="noopener"
+    >
       Listen to AT HOME
     </a>
 
-    <a class="link" href="https://truefallacy.github.io/at-home/">
+    <a
+      class="link"
+      href="https://truefallacy.github.io/at-home/"
+      target="_blank"
+      rel="noopener"
+    >
       Listen to MESSAGE
     </a>
 
