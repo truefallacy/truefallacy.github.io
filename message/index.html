@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message – True Fallacy</title>
+
+  <style>
+    :root {
+      /* MESSAGE color system (lighter, warm neutral) */
+      --bg-top: #c6bfb2;
+      --bg-bottom: #7f7a70;
+
+      --text-primary: #000000;
+      --text-secondary: rgba(0,0,0,0.6);
+
+      --button-bg: rgba(255,255,255,0.55);
+      --button-border: rgba(0,0,0,0.15);
+      --button-hover-bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom));
+      color: var(--text-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    /* ---------- COVER + PLAY BUTTON ---------- */
+
+    .cover-wrapper {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .cover {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+    }
+
+    .play-button:hover {
+      transform: translate(-50%, -50%) scale(1.05);
+      background: rgba(0,0,0,0.75);
+    }
+
+    .play-button::before {
+      content: "";
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+      letter-spacing: 0.05em;
+    }
+
+    .artist-logo {
+      width: 200px;
+      margin-bottom: 30px;
+      opacity: 0.6;
+      filter: brightness(0) saturate(100%);
+    }
+
+    /* ---------- BUTTON LINKS ---------- */
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      text-decoration: none;
+      color: var(--text-primary);
+
+      background: var(--button-bg);
+      border: 1px solid var(--button-border);
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .link:hover {
+      background: var(--button-hover-bg);
+      color: var(--text-primary);
+    }
+
+    .link img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) saturate(100%);
+      transition: filter 0.25s ease;
+    }
+
+    footer {
+      margin-top: 35px;
+    }
+
+    .footer-logo {
+      width: 36px;
+      opacity: 0.4;
+      filter: brightness(0) saturate(100%);
+    }
+
+    /* ---------- VIDEO MODAL ---------- */
+
+    .video-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .video-overlay.active {
+      display: flex;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- COVER WITH PLAY BUTTON -->
+    <div class="cover-wrapper">
+      <img
+        src="message-cover.jpg"
+        alt="Message cover art"
+        class="cover"
+      >
+      <div class="play-button" id="openVideo" aria-label="Play video"></div>
+    </div>
+
+    <h1>MESSAGE</h1>
+
+    <img
+      src="../assets/brand/true-fallacy-white.svg"
+      alt="True Fallacy"
+      class="artist-logo"
+    />
+
+    <a
+      class="link"
+      href="https://open.spotify.com/track/1nPcWIv3EYEMVghkD7GhWi?si=CwV-yRytSRyanN2CIaxrMA"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/spotify-white.svg" alt="Spotify">
+      Play on Spotify
+    </a>
+
+    <a
+      class="link"
+      href="https://music.apple.com/us/album/message/583359116?i=583359177"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
+      Play on Apple Music
+    </a>
+
+    <a
+      class="link"
+      href="https://youtu.be/-SbTEFbfvDU?si=xSjt5zr1HIBeiffp"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+      Play on YouTube
+    </a>
+
+    <a
+      class="link"
+      href="https://on.soundcloud.com/1445JMYUZcSId52SRO"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
+      Play on SoundCloud
+    </a>
+
+    <a
+      class="link"
+      href="https://truefallacy.bandcamp.com/track/message"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
+      Download on Bandcamp
+    </a>
+
+    <footer>
+      <img
+        src="../assets/brand/tf-white.svg"
+        alt="True Fallacy"
+        class="footer-logo"
+      />
+    </footer>
+
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-overlay" id="videoOverlay">
+    <div class="video-container">
+      <iframe
+        id="videoFrame"
+        src=""
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById("openVideo");
+    const overlay = document.getElementById("videoOverlay");
+    const iframe = document.getElementById("videoFrame");
+
+    const YOUTUBE_EMBED =
+      "https://www.youtube.com/embed/-SbTEFbfvDU?autoplay=1&rel=0";
+
+    openBtn.addEventListener("click", () => {
+      iframe.src = YOUTUBE_EMBED;
+      overlay.classList.add("active");
+    });
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove("active");
+        iframe.src = "";
+      }
+    });
+  </script>
+
+</body>
+</html>
