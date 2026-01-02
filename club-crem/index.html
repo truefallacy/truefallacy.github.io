@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CLUB CREM – True Fallacy</title>
+
+  <style>
+    :root {
+      /* CLUB CREM color system (deep club red) */
+      --bg-top: #8e1f24;
+      --bg-bottom: #3a0b0d;
+
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255,255,255,0.75);
+
+      --button-bg: rgba(255,255,255,0.15);
+      --button-border: rgba(255,255,255,0.25);
+      --button-hover-bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom));
+      color: var(--text-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    /* ---------- COVER + PLAY BUTTON ---------- */
+
+    .cover-wrapper {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .cover {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    .play-button:hover {
+      transform: translate(-50%, -50%) scale(1.05);
+      background: rgba(0,0,0,0.75);
+    }
+
+    .play-button::before {
+      content: "";
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+
+    /* ---------- HEADLINES ---------- */
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 8px;
+      letter-spacing: 0.08em;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+    }
+
+    /* ---------- BUTTON LINKS ---------- */
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      text-decoration: none;
+      color: #ffffff;
+
+      background: var(--button-bg);
+      border: 1px solid var(--button-border);
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .link:hover {
+      background: var(--button-hover-bg);
+      color: #000000;
+    }
+
+    .link img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(1) saturate(0);
+      transition: filter 0.25s ease;
+    }
+
+    .link:hover img {
+      filter: brightness(0) saturate(100%);
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      margin-top: 35px;
+    }
+
+    .footer-logo {
+      width: 36px;
+      opacity: 0.4;
+      filter: brightness(1) saturate(0);
+    }
+
+    /* ---------- VIDEO MODAL ---------- */
+
+    .video-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+
+    .video-overlay.active {
+      display: flex;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- COVER WITH PLAY BUTTON -->
+    <div class="cover-wrapper">
+      <img
+        src="club-crem-playlist-cover.jpg"
+        alt="CLUB CREM playlist cover"
+        class="cover"
+      >
+      <div class="play-button" id="openVideo" aria-label="Play playlist"></div>
+    </div>
+
+    <h1>CLUB CREM</h1>
+
+    <div class="subhead">
+      A dark dance club playlist for all the misfits, derelicts, and damaged goods.
+      Playlist updated regularly.
+    </div>
+
+    <a
+      class="link"
+      href="https://open.spotify.com/playlist/6TBAzCDStJP3ovfbzKqnKQ?si=jrQM3lPsTB2u5rcm9_Qvbw&pi=lUwf-dLyTtmZ6"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/spotify-white.svg" alt="Spotify">
+      Play on Spotify
+    </a>
+
+    <a
+      class="link"
+      href="https://music.apple.com/us/playlist/club-crem/pl.u-7jBMyIWGE29b"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
+      Play on Apple Music
+    </a>
+
+    <a
+      class="link"
+      href="https://youtube.com/playlist?list=PL7S77YdaJfhCHx1WrU1Zt8I2aSfz-9TOW"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+      Play on YouTube
+    </a>
+
+    <footer>
+      <img
+        src="../assets/brand/tf-white.svg"
+        alt="True Fallacy"
+        class="footer-logo"
+      />
+    </footer>
+
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-overlay" id="videoOverlay">
+    <div class="video-container">
+      <iframe
+        id="videoFrame"
+        src=""
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById("openVideo");
+    const overlay = document.getElementById("videoOverlay");
+    const iframe = document.getElementById("videoFrame");
+
+    const YOUTUBE_PLAYLIST_EMBED =
+      "https://www.youtube.com/embed/videoseries?list=PL7S77YdaJfhCHx1WrU1Zt8I2aSfz-9TOW&autoplay=1&rel=0";
+
+    openBtn.addEventListener("click", () => {
+      iframe.src = YOUTUBE_PLAYLIST_EMBED;
+      overlay.classList.add("active");
+    });
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove("active");
+        iframe.src = "";
+      }
+    });
+  </script>
+
+</body>
+</html>
