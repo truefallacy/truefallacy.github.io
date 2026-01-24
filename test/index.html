@@ -3,27 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Message – True Fallacy</title>
+  <title>Infatuation – True Fallacy</title>
 
   <style>
-    :root {
-      /* MESSAGE color system (lighter, warm neutral) */
-      --bg-top: #c6bfb2;
-      --bg-bottom: #7f7a70;
-
-      --text-primary: #000000;
-      --text-secondary: rgba(0,0,0,0.6);
-
-      --button-bg: rgba(255,255,255,0.55);
-      --button-border: rgba(0,0,0,0.15);
-      --button-hover-bg: #ffffff;
-    }
-
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom));
-      color: var(--text-primary);
+      background: radial-gradient(circle at top, #2a0a3d, #050008);
+      color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,7 +24,7 @@
       padding: 30px 0;
     }
 
-    /* ---------- COVER + PLAY BUTTON ---------- */
+    /* ---------- COVER + PLAY BUTTON (MATCHES MESSAGE) ---------- */
 
     .cover-wrapper {
       position: relative;
@@ -47,7 +34,7 @@
     .cover {
       width: 100%;
       border-radius: 14px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
       display: block;
     }
 
@@ -87,58 +74,65 @@
       letter-spacing: 0.05em;
     }
 
-    .artist-logo {
-      width: 200px;
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #b3b3b3;
       margin-bottom: 30px;
-      opacity: 0.6;
-      filter: brightness(0) saturate(100%);
     }
-
-    /* ---------- BUTTON LINKS ---------- */
 
     .link {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-
       text-decoration: none;
-      color: var(--text-primary);
-
-      background: var(--button-bg);
-      border: 1px solid var(--button-border);
+      color: #ffffff;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
       padding: 16px;
       border-radius: 12px;
       margin-bottom: 16px;
       font-size: 1rem;
-
       transition: all 0.25s ease;
       backdrop-filter: blur(6px);
     }
 
     .link:hover {
-      background: var(--button-hover-bg);
-      color: var(--text-primary);
+      background: #ffffff;
+      color: #000000;
     }
 
     .link img {
       width: 20px;
       height: 20px;
-      filter: brightness(0) saturate(100%);
       transition: filter 0.25s ease;
     }
 
-    footer {
-      margin-top: 35px;
+    .link:hover img,
+    .link:active img {
+      filter: brightness(0);
+    }
+
+    .artist-logo {
+      width: 200px;
+      margin-bottom: 30px;
+      opacity: 0.7;
     }
 
     .footer-logo {
       width: 36px;
       opacity: 0.4;
-      filter: brightness(0) saturate(100%);
     }
 
-    /* ---------- VIDEO MODAL ---------- */
+    footer {
+      margin-top: 35px;
+      font-size: 0.75rem;
+      color: #666;
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- VIDEO MODAL (MATCHES MESSAGE) ---------- */
 
     .video-overlay {
       position: fixed;
@@ -180,14 +174,15 @@
     <!-- COVER WITH PLAY BUTTON -->
     <div class="cover-wrapper">
       <img
-        src="message-cover.jpg"
-        alt="Message cover art"
+        src="infatuation-cover.jpg"
+        alt="Infatuation cover art"
         class="cover"
+        loading="lazy"
       >
       <div class="play-button" id="openVideo" aria-label="Play video"></div>
     </div>
 
-    <h1>MESSAGE</h1>
+    <h1>INFATUATION</h1>
 
     <img
       src="../assets/brand/true-fallacy-white.svg"
@@ -197,7 +192,7 @@
 
     <a
       class="link"
-      href="https://open.spotify.com/track/1nPcWIv3EYEMVghkD7GhWi?si=CwV-yRytSRyanN2CIaxrMA"
+      href="https://open.spotify.com/album/4Rjc9SkL9ykXBDeq7OqioE?si=sRmXo3LAQNWZLZzKUmeUcA"
       target="_blank"
       rel="noopener"
     >
@@ -207,7 +202,7 @@
 
     <a
       class="link"
-      href="https://music.apple.com/us/album/message/583359116?i=583359177"
+      href="https://music.apple.com/us/album/infatuation/1839276887?i=1839276890"
       target="_blank"
       rel="noopener"
     >
@@ -217,7 +212,7 @@
 
     <a
       class="link"
-      href="https://youtu.be/-SbTEFbfvDU?si=xSjt5zr1HIBeiffp"
+      href="https://youtu.be/zkGf_CLQ1WY?si=AfobKX8X1kCyeH51"
       target="_blank"
       rel="noopener"
     >
@@ -227,7 +222,7 @@
 
     <a
       class="link"
-      href="https://on.soundcloud.com/1445JMYUZcSId52SRO"
+      href="https://on.soundcloud.com/jTvZqFpSKIzmyzQ9mZ"
       target="_blank"
       rel="noopener"
     >
@@ -237,7 +232,7 @@
 
     <a
       class="link"
-      href="https://truefallacy.bandcamp.com/track/message"
+      href="https://truefallacy.bandcamp.com/track/infatuation-2"
       target="_blank"
       rel="noopener"
     >
@@ -273,7 +268,7 @@
     const iframe = document.getElementById("videoFrame");
 
     const YOUTUBE_EMBED =
-      "https://www.youtube.com/embed/-SbTEFbfvDU?autoplay=1&rel=0";
+      "https://www.youtube.com/embed/zkGf_CLQ1WY?autoplay=1&rel=0";
 
     openBtn.addEventListener("click", () => {
       iframe.src = YOUTUBE_EMBED;
