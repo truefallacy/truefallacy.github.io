@@ -2,26 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>THINK – True Fallacy</title>
+
+  <!-- Mobile behavior -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- SEO -->
+  <title>AT HOME – True Fallacy</title>
+  <meta name="description" content="At Home by True Fallacy. Stream or download now.">
 
   <style>
+    :root {
+      --text-primary: #000000;
+      --text-muted: #4a4a4a;
+
+      --button-bg: rgba(255, 255, 255, 0.72);
+      --button-border: rgba(0, 0, 0, 0.18);
+
+      --bg-top: #b3b2a8;
+      --bg-bottom: #87867b;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top, #7a245f, #0d020a);
-      color: #ffffff;
+      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom));
+      color: var(--text-primary);
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
     }
 
     .container {
-      max-width: 420px;
       width: 90%;
+      max-width: 420px;
       text-align: center;
-      padding: 30px 0;
+      padding: 32px 0;
     }
 
     /* ---------- COVER + PLAY BUTTON ---------- */
@@ -33,8 +54,8 @@
     .cover {
       width: 100%;
       border-radius: 14px;
-      margin-bottom: 38px; /* MATCHES INFATUATION */
-      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+      margin-bottom: 38px; /* MATCHES INFATUATION SYMMETRY */
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
       display: block;
     }
 
@@ -70,57 +91,64 @@
 
     h1 {
       font-size: 2rem;
-      margin: 10px 0 5px;
-      letter-spacing: 0.05em;
+      margin: 8px 0 6px;
+      letter-spacing: 0.08em;
     }
+
+    /* ---------- BRAND LOGOS ---------- */
+
+    .artist-logo,
+    .footer-logo {
+      filter: brightness(0) saturate(100%) invert(0.25);
+    }
+
+    .artist-logo {
+      width: 200px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    /* ---------- BUTTONS ---------- */
 
     .link {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      text-decoration: none;
-      color: #ffffff;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.15);
+      margin-bottom: 16px;
       padding: 16px;
       border-radius: 12px;
-      margin-bottom: 16px;
+      border: 1px solid var(--button-border);
+      background: var(--button-bg);
+      color: var(--text-primary);
+      text-decoration: none;
       font-size: 1rem;
-      transition: all 0.25s ease;
+      transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
       backdrop-filter: blur(6px);
     }
 
     .link:hover {
       background: #ffffff;
-      color: #000000;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .link:active {
+      transform: scale(0.98);
     }
 
     .link img {
       width: 20px;
       height: 20px;
-      transition: filter 0.25s ease;
+      filter: brightness(0) saturate(100%);
     }
 
-    .link:hover img,
-    .link:active img {
-      filter: brightness(0);
-    }
-
-    .artist-logo {
-      width: 200px;
-      margin-bottom: 30px;
-      opacity: 0.7;
+    footer {
+      margin-top: 36px;
     }
 
     .footer-logo {
       width: 36px;
-      opacity: 0.4;
-    }
-
-    footer {
-      margin-top: 35px;
-      letter-spacing: 0.1em;
+      opacity: 0.75;
     }
 
     /* ---------- VIDEO MODAL ---------- */
@@ -164,56 +192,62 @@
 
     <div class="cover-wrapper">
       <img
-        src="think-cover.jpg"
-        alt="THINK cover art"
+        src="athome-cover.jpg"
+        alt="AT HOME cover art"
         class="cover"
         loading="lazy"
       >
       <div class="play-button" id="openVideo" aria-label="Play video"></div>
     </div>
 
-    <h1>THINK</h1>
+    <h1>AT HOME</h1>
 
     <img
       src="../assets/brand/true-fallacy-white.svg"
       alt="True Fallacy"
       class="artist-logo"
-    />
+    >
 
-    <a class="link" href="https://open.spotify.com/track/0iFZITtlwWOHqk8U7OU9s3?si=0gbb5jHqScm7IkmkgWjJhw" target="_blank" rel="noopener">
-      <img src="../assets/icons/spotify-white.svg" alt="Spotify">
+    <a class="link" href="https://open.spotify.com/track/30rlUp5wAUapOGtHYvK4ME" target="_blank" rel="noopener">
+      <img src="../assets/icons/spotify-white.svg" alt="">
       Play on Spotify
     </a>
 
-    <a class="link" href="https://music.apple.com/us/album/think/1684441206?i=1684441352" target="_blank" rel="noopener">
-      <img src="../assets/icons/apple-music-white.svg" alt="Apple Music">
+    <a class="link" href="https://music.apple.com/us/album/at-home/1197890612?i=1197890619" target="_blank" rel="noopener">
+      <img src="../assets/icons/apple-music-white.svg" alt="">
       Play on Apple Music
     </a>
 
-    <a class="link" href="https://youtu.be/hzL82opSlsk?si=YQvZkiiRQ3Is0kGM" target="_blank" rel="noopener">
-      <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+    <a class="link" href="https://youtu.be/ZU8atKMhP2M" target="_blank" rel="noopener">
+      <img src="../assets/icons/youtube-white.svg" alt="">
       Play on YouTube
     </a>
 
-    <a class="link" href="https://on.soundcloud.com/UVHlpPSZJnjn9VJOYK" target="_blank" rel="noopener">
-      <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
+    <a class="link" href="https://on.soundcloud.com/gG4E5pLnVgulRa7Iu8" target="_blank" rel="noopener">
+      <img src="../assets/icons/soundcloud-white.png" alt="">
       Play on SoundCloud
     </a>
 
-    <a class="link" href="https://truefallacy.bandcamp.com/track/think" target="_blank" rel="noopener">
-      <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
+    <a class="link" href="https://truefallacy.bandcamp.com/track/at-home" target="_blank" rel="noopener">
+      <img src="../assets/icons/bandcamp-white.svg" alt="">
       Download on Bandcamp
     </a>
 
     <footer>
-      <img src="../assets/brand/tf-white.svg" alt="True Fallacy" class="footer-logo" />
+      <img src="../assets/brand/tf-white.svg" alt="True Fallacy" class="footer-logo">
     </footer>
 
   </div>
 
+  <!-- VIDEO MODAL -->
   <div class="video-overlay" id="videoOverlay">
     <div class="video-container">
-      <iframe id="videoFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe
+        id="videoFrame"
+        src=""
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 
@@ -223,7 +257,7 @@
     const iframe = document.getElementById("videoFrame");
 
     const YOUTUBE_EMBED =
-      "https://www.youtube.com/embed/hzL82opSlsk?autoplay=1&rel=0";
+      "https://www.youtube.com/embed/ZU8atKMhP2M?autoplay=1&rel=0";
 
     openBtn.addEventListener("click", () => {
       iframe.src = YOUTUBE_EMBED;
