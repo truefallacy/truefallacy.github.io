@@ -2,187 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Mobile behavior -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <!-- SEO -->
-  <title>AT HOME – True Fallacy</title>
-  <meta name="description" content="At Home by True Fallacy. Stream or download now.">
+  <title>True Fallacy – Links</title>
+  <meta name="description" content="Official links for True Fallacy. Listen to new music, watch videos, and follow on social media." />
 
   <style>
-    :root {
-      --text-primary: #000000;
-      --text-muted: #4a4a4a;
-
-      --button-bg: rgba(255, 255, 255, 0.72);
-      --button-border: rgba(0, 0, 0, 0.18);
-
-      --bg-top: #b3b2a8;
-      --bg-bottom: #87867b;
-    }
-
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
     body {
       margin: 0;
-      min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom));
-      color: var(--text-primary);
+
+      /* ~5% darker pink-grey background */
+      background: radial-gradient(
+        circle at top,
+        #eee0e8,
+        #ddccd6
+      );
+
+      color: #000000;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
     }
 
     .container {
-      width: 90%;
       max-width: 420px;
+      width: 90%;
       text-align: center;
-      padding: 32px 0;
+      padding: 44px 0;
     }
 
-    /* ---------- COVER + PLAY BUTTON ---------- */
-
-    .cover-wrapper {
-      position: relative;
-    }
-
-    .cover {
-      width: 100%;
-      border-radius: 14px;
-      margin-bottom: 38px; /* MATCHES INFATUATION SYMMETRY */
-      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
-      display: block;
-    }
-
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.45);
-    }
-
-    .play-button:hover {
-      transform: translate(-50%, -50%) scale(1.05);
-      background: rgba(0,0,0,0.75);
-    }
-
-    .play-button::before {
-      content: "";
-      margin-left: 5px;
-      border-style: solid;
-      border-width: 12px 0 12px 20px;
-      border-color: transparent transparent transparent #ffffff;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 8px 0 6px;
-      letter-spacing: 0.08em;
-    }
-
-    /* ---------- BRAND LOGOS ---------- */
-
-    .artist-logo,
-    .footer-logo {
-      filter: brightness(0) saturate(100%) invert(0.25);
-    }
+    /* ---------- HEADER ---------- */
 
     .artist-logo {
-      width: 200px;
-      margin-bottom: 30px;
-      opacity: 0.9;
+      width: 270px;
+      margin-bottom: 18px;
+
+      /* Pink + grey pop without modifying SVG */
+      filter:
+        grayscale(1)
+        brightness(1.1)
+        drop-shadow(0 2px 6px rgba(236, 96, 166, 0.35));
+      opacity: 0.95;
     }
 
-    /* ---------- BUTTONS ---------- */
+    .subhead {
+      font-size: 0.85rem;
+      letter-spacing: 0.28em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    /* ---------- SOCIAL ICONS ---------- */
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 38px;
+    }
+
+    .socials a img {
+      width: 26px;
+      height: 26px;
+
+      /* ~5% lighter still, closer to white */
+      opacity: 0.87;
+
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .socials a:hover img {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    /* ---------- BUTTON LINKS ---------- */
 
     .link {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding: 16px;
-      border-radius: 12px;
-      border: 1px solid var(--button-border);
-      background: var(--button-bg);
-      color: var(--text-primary);
       text-decoration: none;
+
+      background: rgba(255,255,255,0.88);
+      color: #000000;
+
+      padding: 16px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+
       font-size: 1rem;
-      transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
-      backdrop-filter: blur(6px);
+      font-weight: 500;
+
+      transition:
+        background 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .link:hover {
       background: #ffffff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      color: #000000;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
     }
 
-    .link:active {
-      transform: scale(0.98);
-    }
-
-    .link img {
-      width: 20px;
-      height: 20px;
-      filter: brightness(0) saturate(100%);
-    }
+    /* ---------- FOOTER ---------- */
 
     footer {
-      margin-top: 36px;
+      margin-top: 46px;
     }
 
     .footer-logo {
-      width: 36px;
-      opacity: 0.75;
+      width: 38px;
+
+      /* ~5% lighter still, closer to white */
+      opacity: 0.60;
     }
 
-    /* ---------- VIDEO MODAL ---------- */
-
-    .video-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-      padding: 20px;
-    }
-
-    .video-overlay.active {
-      display: flex;
-    }
-
-    .video-container {
-      width: 100%;
-      max-width: 900px;
-      aspect-ratio: 16 / 9;
-      background: #000;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.7);
-    }
-
-    .video-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
   </style>
 </head>
 
@@ -190,87 +131,123 @@
 
   <div class="container">
 
-    <div class="cover-wrapper">
-      <img
-        src="athome-cover.jpg"
-        alt="AT HOME cover art"
-        class="cover"
-        loading="lazy"
-      >
-      <div class="play-button" id="openVideo" aria-label="Play video"></div>
-    </div>
-
-    <h1>AT HOME</h1>
-
+    <!-- MAIN LOGO -->
     <img
       src="../assets/brand/true-fallacy-white.svg"
       alt="True Fallacy"
       class="artist-logo"
+    />
+
+    <!-- SUB HEADLINE -->
+    <div class="subhead">
+      INFATUATION – OUT NOW
+    </div>
+
+    <!-- SOCIAL ICONS (HORIZONTAL) -->
+    <div class="socials">
+      <a href="https://www.instagram.com/truefallacy/" target="_blank" rel="noopener">
+        <img src="../assets/icons/instagram-white.svg" alt="Instagram">
+      </a>
+
+      <a href="https://www.tiktok.com/@truefallacy" target="_blank" rel="noopener">
+        <img src="../assets/icons/tik-tok-white.svg" alt="TikTok">
+      </a>
+
+      <a href="https://www.youtube.com/truefallacy" target="_blank" rel="noopener">
+        <img src="../assets/icons/youtube-white.svg" alt="YouTube">
+      </a>
+
+      <a href="https://x.com/true_fallacy" target="_blank" rel="noopener">
+        <img src="../assets/icons/x-white.svg" alt="X">
+      </a>
+
+      <a href="https://www.facebook.com/TrueFallacy/" target="_blank" rel="noopener">
+        <img src="../assets/icons/facebook-white.svg" alt="Facebook">
+      </a>
+
+      <a href="https://soundcloud.com/truefallacy" target="_blank" rel="noopener">
+        <img src="../assets/icons/soundcloud-white.png" alt="SoundCloud">
+      </a>
+
+      <a href="https://truefallacy.bandcamp.com/" target="_blank" rel="noopener">
+        <img src="../assets/icons/bandcamp-white.svg" alt="Bandcamp">
+      </a>
+    </div>
+
+    <!-- BUTTON LINKS -->
+    <a
+      class="link"
+      href="https://truefallacy.github.io/infatuation/"
+      target="_blank"
+      rel="noopener"
     >
-
-    <a class="link" href="https://open.spotify.com/track/30rlUp5wAUapOGtHYvK4ME" target="_blank" rel="noopener">
-      <img src="../assets/icons/spotify-white.svg" alt="">
-      Play on Spotify
+      Listen to INFATUATION
     </a>
 
-    <a class="link" href="https://music.apple.com/us/album/at-home/1197890612?i=1197890619" target="_blank" rel="noopener">
-      <img src="../assets/icons/apple-music-white.svg" alt="">
-      Play on Apple Music
+    <a
+      class="link"
+      href="https://truefallacy.github.io/club-crem/"
+      target="_blank"
+      rel="noopener"
+    >
+      CLUB CREM Playlist
     </a>
 
-    <a class="link" href="https://youtu.be/ZU8atKMhP2M" target="_blank" rel="noopener">
-      <img src="../assets/icons/youtube-white.svg" alt="">
-      Play on YouTube
+    <a
+      class="link"
+      href="https://truefallacy.github.io/think/"
+      target="_blank"
+      rel="noopener"
+    >
+      Listen to THINK
     </a>
 
-    <a class="link" href="https://on.soundcloud.com/gG4E5pLnVgulRa7Iu8" target="_blank" rel="noopener">
-      <img src="../assets/icons/soundcloud-white.png" alt="">
-      Play on SoundCloud
+    <a
+      class="link"
+      href="https://truefallacy.github.io/at-home/"
+      target="_blank"
+      rel="noopener"
+    >
+      Listen to AT HOME
     </a>
 
-    <a class="link" href="https://truefallacy.bandcamp.com/track/at-home" target="_blank" rel="noopener">
-      <img src="../assets/icons/bandcamp-white.svg" alt="">
-      Download on Bandcamp
+    <a
+      class="link"
+      href="https://truefallacy.github.io/message/"
+      target="_blank"
+      rel="noopener"
+    >
+      Listen to MESSAGE
     </a>
 
+    <a
+      class="link"
+      href="https://truefallacy.bandcamp.com/album/making-the-noise-all-go-away"
+      target="_blank"
+      rel="noopener"
+    >
+      Listen to MAKING THE NOISE ALL GO AWAY
+    </a>
+
+    <a
+      class="link"
+      href="https://on.soundcloud.com/1ltfWLHjdfsewANgV4"
+      target="_blank"
+      rel="noopener"
+    >
+      T H R E S H O L D
+    </a>
+
+    <!-- FOOTER -->
     <footer>
-      <img src="../assets/brand/tf-white.svg" alt="True Fallacy" class="footer-logo">
+      <img
+        src="../assets/brand/tf-white.svg"
+        alt="True Fallacy"
+        class="footer-logo"
+      />
     </footer>
 
   </div>
-
-  <!-- VIDEO MODAL -->
-  <div class="video-overlay" id="videoOverlay">
-    <div class="video-container">
-      <iframe
-        id="videoFrame"
-        src=""
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-
-  <script>
-    const openBtn = document.getElementById("openVideo");
-    const overlay = document.getElementById("videoOverlay");
-    const iframe = document.getElementById("videoFrame");
-
-    const YOUTUBE_EMBED =
-      "https://www.youtube.com/embed/ZU8atKMhP2M?autoplay=1&rel=0";
-
-    openBtn.addEventListener("click", () => {
-      iframe.src = YOUTUBE_EMBED;
-      overlay.classList.add("active");
-    });
-
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) {
-        overlay.classList.remove("active");
-        iframe.src = "";
-      }
-    });
-  </script>
 
 </body>
 </html>
