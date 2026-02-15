@@ -39,7 +39,6 @@
       width: 270px;
       margin-bottom: 18px;
 
-      /* ~15% darker so it doesn’t feel overly bright */
       filter:
         grayscale(1)
         brightness(1.03)
@@ -66,10 +65,7 @@
     .socials a img {
       width: 26px;
       height: 26px;
-
-      /* ~5% lighter / brighter */
       opacity: 0.92;
-
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
@@ -86,7 +82,9 @@
       justify-content: center;
       text-decoration: none;
 
-      background: rgba(255,255,255,0.88);
+      /* 80% blended toward background */
+      background: #e6dbe2;
+
       color: #000000;
 
       padding: 16px;
@@ -101,14 +99,15 @@
         transform 0.15s ease,
         box-shadow 0.25s ease;
 
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
 
     .link:hover {
-      background: #ffffff;
+      /* Slight lift instead of jumping to white */
+      background: #f0e7ed;
       color: #000000;
       transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
     }
 
     /* ---------- FOOTER ---------- */
@@ -119,8 +118,6 @@
 
     .footer-logo {
       width: 38px;
-
-      /* unchanged */
       opacity: 0.60;
     }
 
@@ -143,7 +140,7 @@
       INFATUATION – OUT NOW
     </div>
 
-    <!-- SOCIAL ICONS (HORIZONTAL) -->
+    <!-- SOCIAL ICONS -->
     <div class="socials">
       <a href="https://www.instagram.com/truefallacy/" target="_blank" rel="noopener">
         <img src="../assets/icons/instagram-white.svg" alt="Instagram">
